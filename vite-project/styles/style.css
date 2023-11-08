@@ -1,3 +1,4 @@
+@import url(variables.css);
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -12,6 +13,12 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  --light-blue: #2998ff;
+}
+
+.hero {
+  background-color: var(--light-blue);
 }
 
 a {
@@ -96,6 +103,10 @@ button:focus-visible {
   }
 }
 
-body {
-  background-color: #aaaeeb;
+.buttonAll{
+  background-color: #6192d3;
+}
+
+.buttonTest{
+  background-color: #b7e4c1;
 }
