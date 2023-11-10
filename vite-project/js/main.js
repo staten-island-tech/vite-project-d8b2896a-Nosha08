@@ -2,9 +2,6 @@ import '../styles/style.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import {realEstate} from './array.js'
-import javascriptLogo from '../javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from '../counter.js'
 
 AOS.init()
 

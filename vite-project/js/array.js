@@ -17,7 +17,7 @@ const realEstate = [
     },
     {
         name: 'House 5',
-        placeholder: true
+        placeholder: false
     },
     {
         name: 'House 6',
