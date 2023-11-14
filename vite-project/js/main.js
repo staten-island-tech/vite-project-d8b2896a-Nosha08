@@ -36,6 +36,4 @@ function remove(div) {
   div.innerHTML = ''
 }
 
-setupCounter(document.querySelector('#counter'))
-
 console.log(realEstate)
