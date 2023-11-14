@@ -1,43 +1,75 @@
+// Add LIST property
+
 const realEstate = [
     {
-        name: 'House 1',
-        placeholder: true
+        name: "Shrek's Shack",
+        location: '',
+        description: 'Located in t',
+        price: 0.03,
+        EvanCanAfford: false
     },
     {
-        name: 'House 2',
-        placeholder: true
+        name: 'The White House',
+        location: '',
+        description: 'Located in t',
+        price: 45000000,
+        EvanCanAfford: false
     },
     {
-        name: 'House 3',
-        placeholder: true
+        name: 'Skid Row Tent',
+        location: '',
+        description: 'Located in t',
+        price: 0,
+        EvanCanAfford: true
     },
     {
-        name: 'House 4',
-        placeholder: true
+        name: "Spongebob's Pineapple",
+        location: '',
+        description: 'Located in t',
+        price: 15,
+        EvanCanAfford: false
     }, 
     {
-        name: 'House 5',
-        placeholder: false
+        name: 'Palace of Versailles',
+        location: '',
+        description: 'Located in t',
+        price: 0,
+        EvanCanAfford: false
     },
     {
-        name: 'House 6',
-        placeholder: true
+        name: 'Mickey Mouse Clubhouse',
+        location: '',
+        description: 'Located in t',
+        price: 0,
+        EvanCanAfford: false
     },
     {
-        name: 'House 7',
-        placeholder: true
+        name: 'The Biltmore',
+        location: '',
+        description: 'Located in t',
+        price: 0,
+        EvanCanAfford: false
     },
     {
-        name: 'House 8',
-        placeholder: true
+        name: 'Hong Kong Apartment',
+        location: '',
+        description: 'Located in t',
+        price: 0,
+        EvanCanAfford: false
     },
     {
-        name: 'House 9',
-        placeholder: true
+        name: "Kim Jung Un's Estate",
+        location: '',
+        description: 'Located in t',
+        price: 0,
+        EvanCanAfford: false
     },
     {
-        name: 'House 10',
-        placeholder: false
+        name: "Peter Griffin's home",
+        location: '',
+        description: 'Located in t',
+        price: 0,
+        EvanCanAfford: false
     },
 ]
 

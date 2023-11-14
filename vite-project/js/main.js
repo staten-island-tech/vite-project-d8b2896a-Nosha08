@@ -16,7 +16,9 @@ DOMSelectors.button1.addEventListener('click', function () {
   remove(div)
   realEstate.forEach((property) => {
     DOMSelectors.display.insertAdjacentHTML('beforeend', `
+    <div class='card'>
       <h1>${property.name}</h1>
+    </div>
     `)
   })
 })
@@ -24,10 +26,12 @@ DOMSelectors.button1.addEventListener('click', function () {
 DOMSelectors.button2.addEventListener('click', function () {
   const div = DOMSelectors.display;
   remove(div)
-  const a = realEstate.filter((x) => x.placeholder === true)
+  const a = realEstate.filter((x) => x.EvanCanAfford === true)
   a.forEach((property) => {
     DOMSelectors.display.insertAdjacentHTML('beforeend', `
+    <div class='card'>
       <h1>${property.name}</h1>
+    </div>
     `)
   })
 })
