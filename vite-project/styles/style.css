@@ -1,4 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&family=Roboto+Condensed&family=Roboto:wght@100&display=swap');
 @import url(variables.css);
 :root {
-  --a: 
+  --light-blue: rgb(138, 187, 216);
+  --dark-blue: rgb(106, 188, 235);
+  --yellow: rgb(230, 222, 114);
+  --white: #fff8e8;
+  --purple: #4d3a85;
+  --dark-purple: #25174d;
+
+  --button-text: 18px;
+
+  --font: 'Roboto Condensed', sans-serif;
+
+}
+
+* {
+  font-family: var(--font);
+}
+
+body {
+  background-color: var(--primary);
+}
+
+.vacation {
+  --primary: var(--light-blue);
+  --secondary: var(--yellow);
+  --tertiary: var(--dark-blue);
+}
+
+.professional {
+  --primary: var(--white);
+  --secondary: var(--purple);
+  --tertiary: var(--dark-purple);
+}
+
+#app {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background-color: var(--secondary);
+  width: 25%;
+  text-align: center;
+  border-radius: 4px;
+  border: 2px solid var(--tertiary);
+  margin: 20px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  color: white;
+  opacity: 0;
+  animation: fadeIn 0.8s ease-in-out forwards;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.card:hover {
+  background-color: var(--tertiary);
+}
+
+button {
+  background-color: var(--secondary);
+  text-align: center;
+  border-radius: 5px;
+  border: 2px solid var(--tertiary);
+  margin-right: 5%;
+  margin-bottom: 3%;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  font-size: var(--button-text);
+  color: white;
+  opacity: 0;
+  animation: fadeIn 0.8s ease-in-out forwards 0.2s;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: var(--tertiary);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

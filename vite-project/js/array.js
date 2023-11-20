@@ -65,7 +65,7 @@ const realEstate = [
         EvanCanAfford: false
     },
     {
-        name: "Peter Griffin's home",
+        name: "Peter Griffin's Home",
         location: 'Quahog, Rhode Island',
         description: 'Quirky family home in the animated town of Quahog.',
         price: 750000,

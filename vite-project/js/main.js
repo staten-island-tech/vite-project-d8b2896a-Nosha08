@@ -10,7 +10,8 @@ const DOMSelectors = {
   button1: document.querySelector('.buttonAll'),
   button2: document.querySelector('.buttonAfford'),
   button3: document.querySelector('.buttonInflation'),
-  button4: document.querySelector('.buttonAlphabet')
+  button4: document.querySelector('.buttonAlphabet'),
+  theme: document.querySelector('.theme')
 }
 
 DOMSelectors.button1.addEventListener('click', function () {
@@ -92,5 +93,15 @@ DOMSelectors.button4.addEventListener('click', function () {
 function remove(div) {
   div.innerHTML = ''
 }
+
+DOMSelectors.theme.addEventListener('click', function () {
+  if (document.body.classList.contains('vacation')) {
+    document.body.classList.add('professional')
+    document.body.classList.remove('vacation')
+  } else {
+    document.body.classList.add('vacation')
+    document.body.classList.remove('professional')
+  }
+})
 
 console.log(realEstate)
