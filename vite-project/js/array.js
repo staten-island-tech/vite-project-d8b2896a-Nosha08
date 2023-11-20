@@ -33,42 +33,42 @@ const realEstate = [
         name: 'Palace of Versailles',
         location: 'Versailles, France',
         description: 'Opulent palace known for its stunning architecture and gardens.',
-        price: 0,
+        price: 127000000,
         EvanCanAfford: false
     },
     {
         name: 'Mickey Mouse Clubhouse',
         location: 'Disneyland, Anaheim, California',
         description: 'Iconic clubhouse in the magical world of Disney.',
-        price: 0,
+        price: 5.99,
         EvanCanAfford: false
     },
     {
         name: 'The Biltmore',
         location: 'Asheville, North Carolina',
         description: 'Elegant mansion with a rich history and beautiful grounds.',
-        price: 0,
+        price: 12600000,
         EvanCanAfford: false
     },
     {
         name: 'Hong Kong Apartment',
         location: 'Victoria Peak, Hong Kong',
         description: 'Modern apartment with a stunning view of the Hong Kong skyline.',
-        price: 0,
+        price: 925000,
         EvanCanAfford: false
     },
     {
         name: "Kim Jung Un's Estate",
         location: 'Ryongsong Residence, Pyongyang, North Korea',
         description: 'Expansive estate belonging to the Supreme Leader of North Korea.',
-        price: 0,
+        price: 80000000,
         EvanCanAfford: false
     },
     {
         name: "Peter Griffin's home",
         location: 'Quahog, Rhode Island',
         description: 'Quirky family home in the animated town of Quahog.',
-        price: 0,
+        price: 750000,
         EvanCanAfford: false
     },
     {

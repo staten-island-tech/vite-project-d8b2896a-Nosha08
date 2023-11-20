@@ -9,7 +9,8 @@ const DOMSelectors = {
   display: document.querySelector('.display'),
   button1: document.querySelector('.buttonAll'),
   button2: document.querySelector('.buttonAfford'),
-  button3: document.querySelector('.buttonTest')
+  button3: document.querySelector('.buttonInflation'),
+  button4: document.querySelector('.buttonAlphabet')
 }
 
 DOMSelectors.button1.addEventListener('click', function () {
@@ -23,7 +24,7 @@ DOMSelectors.button1.addEventListener('click', function () {
       <h2>${property.location}</h2>
       <p>${property.description}</p>
       <h2>Evan can afford: ${property.EvanCanAfford}</h2>
-      <h1>$${property.price}</h2>
+      <h1>$${property.price.toLocaleString()}</h2>
     </div>
     `)
   })
@@ -41,7 +42,7 @@ DOMSelectors.button2.addEventListener('click', function () {
       <h2>${property.location}</h2>
       <p>${property.description}</p>
       <h2>Evan can afford: ${property.EvanCanAfford}</h2>
-      <h1>$${property.price}</h2>
+      <h1>$${property.price.toLocaleString()}</h2>
     </div>
     `)
   })
@@ -51,8 +52,8 @@ DOMSelectors.button3.addEventListener('click', function () {
   const div = DOMSelectors.display;
   remove(div);
 
-  const inflatedPropertyHTML = realEstate.map((property) => {
-    const inflatedPrice = property.price * 10; // Simulating 10x price inflation
+  const inflation = realEstate.map((property) => {
+    const inflatedPrice = property.price * 1000
 
     return `
       <div class='card'>
@@ -60,13 +61,33 @@ DOMSelectors.button3.addEventListener('click', function () {
         <h2>${property.location}</h2>
         <p>${property.description}</p>
         <h2>Evan can afford: ${property.EvanCanAfford}</h2>
-        <h1>$${inflatedPrice}</h2> <!-- Displaying the inflated price -->
+        <h1>$${inflatedPrice.toLocaleString()}</h2> <!-- Displaying the inflated price -->
       </div>
     `;
   }).join('');
 
-  DOMSelectors.display.insertAdjacentHTML('beforeend', inflatedPropertyHTML);
+  DOMSelectors.display.insertAdjacentHTML('beforeend', inflation);
 })
+
+DOMSelectors.button4.addEventListener('click', function () {
+  const div = DOMSelectors.display;
+  remove(div)
+
+  realEstate.sort((a, b) => a.name.localeCompare(b.name));
+
+  realEstate.forEach((property) => {
+    DOMSelectors.display.insertAdjacentHTML('beforeend', `
+    <div class='card'>
+      <h1>${property.name}</h1>
+      <h2>${property.location}</h2>
+      <p>${property.description}</p>
+      <h2>Evan can afford: ${property.EvanCanAfford}</h2>
+      <h1>$${property.price.toLocaleString()}</h1>
+    </div>
+    `)
+  })
+})
+
 
 function remove(div) {
   div.innerHTML = ''
