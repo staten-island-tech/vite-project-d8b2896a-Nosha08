@@ -23,6 +23,7 @@ DOMSelectors.button1.addEventListener('click', function () {
     <div class='card'>
       <h1>${property.name}</h1>
       <h2>${property.location}</h2>
+      <img src='${property.image}'>
       <p>${property.description}</p>
       <h2>Evan can afford: ${property.EvanCanAfford}</h2>
       <h1>$${property.price.toLocaleString()}</h2>

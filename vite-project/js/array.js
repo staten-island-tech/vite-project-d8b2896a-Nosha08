@@ -11,6 +11,7 @@ const realEstate = [
     {
         name: 'The White House',
         location: '1600 Pennsylvania Avenue NW, Washington, D.C.',
+        image: '../images/white-house.jpg',
         description: 'Historic residence of the President of the United States.',
         price: 45000000,
         EvanCanAfford: false
@@ -85,6 +86,7 @@ const realEstate = [
         price: 1500000,
         EvanCanAfford: false
     },
+    
 ];
 
 export {realEstate}
