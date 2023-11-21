@@ -42,6 +42,7 @@ DOMSelectors.button2.addEventListener('click', function () {
     <div class='card'>
       <h1>${property.name}</h1>
       <h2>${property.location}</h2>
+      <img src='${property.image}'>
       <p>${property.description}</p>
       <h2>Evan can afford: ${property.EvanCanAfford}</h2>
       <h1>$${property.price.toLocaleString()}</h2>
@@ -61,6 +62,7 @@ DOMSelectors.button3.addEventListener('click', function () {
       <div class='card'>
         <h1>${property.name}</h1>
         <h2>${property.location}</h2>
+        <img src='${property.image}'>
         <p>${property.description}</p>
         <h2>Evan can afford: ${property.EvanCanAfford}</h2>
         <h1>$${inflatedPrice.toLocaleString()}</h2> <!-- Displaying the inflated price -->
@@ -75,13 +77,14 @@ DOMSelectors.button4.addEventListener('click', function () {
   const div = DOMSelectors.display;
   remove(div)
 
-  realEstate.sort((a, b) => a.name.localeCompare(b.name));
+  const alphabetical = realEstate.sort((a, b) => a.name.localeCompare(b.name));
 
-  realEstate.forEach((property) => {
+  alphabetical.forEach((property) => {
     DOMSelectors.display.insertAdjacentHTML('beforeend', `
     <div class='card'>
       <h1>${property.name}</h1>
       <h2>${property.location}</h2>
+      <img src='${property.image}'>
       <p>${property.description}</p>
       <h2>Evan can afford: ${property.EvanCanAfford}</h2>
       <h1>$${property.price.toLocaleString()}</h1>
