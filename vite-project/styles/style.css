@@ -23,8 +23,8 @@ body {
 }
 
 .vacation {
-  --primary: var(--light-blue);
-  --secondary: var(--yellow);
+  --primary: var(--yellow);
+  --secondary: var(--light-blue);
   --tertiary: var(--dark-blue);
 }
 
