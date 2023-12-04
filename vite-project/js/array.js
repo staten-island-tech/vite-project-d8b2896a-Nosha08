@@ -92,7 +92,7 @@ const realEstate = [
     {
         name: 'Mountain Retreat',
         location: 'Aspen, Colorado',
-        image: 'aspen.jpg',
+        image: '../images/aspen.jpg',
         description: 'Secluded retreat nestled in the scenic mountains of Aspen.',
         price: 1500000,
         EvanCanAfford: false
