@@ -14,89 +14,37 @@ const DOMSelectors = {
   theme: document.querySelector('.theme')
 }
 
-DOMSelectors.button1.addEventListener('click', function () {
-  const div = DOMSelectors.display;
-  remove(div)
-
-  realEstate.forEach((property) => {
+function render(properties) {
+  remove()
+  properties.forEach((property) => {
     DOMSelectors.display.insertAdjacentHTML('beforeend', `
-    <div class='card'>
-      <h1>${property.name}</h1>
-      <h2>${property.location}</h2>
-      <img src='${property.image}'>
-      <p>${property.description}</p>
-      <h2>Evan can afford: ${property.EvanCanAfford}</h2>
-      <h1>$${property.price.toLocaleString()}</h2>
-    </div>
-    `)
-  })
-})
-
-DOMSelectors.button2.addEventListener('click', function () {
-  const div = DOMSelectors.display;
-  remove(div)
-
-  const affordable = realEstate.filter((x) => x.EvanCanAfford === true)
-  affordable.forEach((property) => {
-    DOMSelectors.display.insertAdjacentHTML('beforeend', `
-    <div class='card'>
-      <h1>${property.name}</h1>
-      <h2>${property.location}</h2>
-      <img src='${property.image}'>
-      <p>${property.description}</p>
-      <h2>Evan can afford: ${property.EvanCanAfford}</h2>
-      <h1>$${property.price.toLocaleString()}</h2>
-    </div>
-    `)
-  })
-})
-
-DOMSelectors.button3.addEventListener('click', function () {
-  const div = DOMSelectors.display;
-  remove(div);
-
-  const inflation = realEstate.map((property) => {
-    const inflatedPrice = property.price * 1000
-
-    return `
       <div class='card'>
         <h1>${property.name}</h1>
         <h2>${property.location}</h2>
         <img src='${property.image}'>
         <p>${property.description}</p>
         <h2>Evan can afford: ${property.EvanCanAfford}</h2>
-        <h1>$${inflatedPrice.toLocaleString()}</h2> <!-- Displaying the inflated price -->
+        <h1>$${property.price.toLocaleString()}</h2>
       </div>
-    `;
-  }).join('');
-
-  DOMSelectors.display.insertAdjacentHTML('beforeend', inflation);
-})
-
-DOMSelectors.button4.addEventListener('click', function () {
-  const div = DOMSelectors.display;
-  remove(div)
-
-  const alphabetical = realEstate.sort((a, b) => a.name.localeCompare(b.name));
-
-  alphabetical.forEach((property) => {
-    DOMSelectors.display.insertAdjacentHTML('beforeend', `
-    <div class='card'>
-      <h1>${property.name}</h1>
-      <h2>${property.location}</h2>
-      <img src='${property.image}'>
-      <p>${property.description}</p>
-      <h2>Evan can afford: ${property.EvanCanAfford}</h2>
-      <h1>$${property.price.toLocaleString()}</h1>
-    </div>
     `)
   })
-})
-
-
-function remove(div) {
-  div.innerHTML = ''
 }
+
+function remove() {
+  DOMSelectors.display.innerHTML = ''
+}
+
+document.addEventListener('click', (event) => {
+  if (event.target.matches('.buttonAll')) {
+    render(realEstate)
+  } else if (event.target.matches('.buttonAfford')) {
+    render(realEstate.filter((property) => property.EvanCanAfford))
+  } else if (event.target.matches('.buttonInflation')) {
+    render(realEstate.map((property) => ({...property, price: property.price * 1000})))
+  } else if (event.target.matches('.buttonAlphabet')) {
+    render(realEstate.slice().sort((a, b) => a.name.localeCompare(b.name)))
+  }
+})
 
 DOMSelectors.theme.addEventListener('click', function () {
   if (document.body.classList.contains('vacation')) {
